@@ -103,25 +103,13 @@ rational reduce(rational &a) {
     a.denom /= __gcd;
     return a;
 }
-/*
- * 
-    if (g.denom == 1) { cout << "Minus" << g.nom << endl; } else { cout << "Minus" << g.nom << " / " << g.denom << endl; }
-    rational h = r * _r;
-    reduce(h);
-    if (h.denom == 1) { cout << "Times: " << h.nom << endl; } else { cout << "Times: " << h.nom << " / " << h.denom << endl; }
-    rational k = r / _r;
-    reduce(k);
-    if (k.denom == 1) { cout << "Divide: " << k.nom << endl; } else { cout << "Divide: " << k.nom << " / " << k.denom << endl; }
-    return 0;
-}
- */
+
 // Frankfurt am Main ;)
 int main() {
     cout << "CRITICAL DEBUG" << '\n';
     int a, b, c, d;
     cin >> a >> b >> c >> d;
-    //rational r(a, b), _r(c, d);
-    rational r, _r;
+    rational r(a, b), _r(c, d);
     cout << "VERY DEBUG" << '\n';
     rational f = r + _r;
     cout << "debug" << '\n';
@@ -129,7 +117,7 @@ int main() {
     cout << 1 << '\n';
     cout << 2 << '\n';
     cout << lcm(r, _r);
-    /*rational g = r - _r;
+    rational g = r - _r;
     reduce(g);
     if (g.denom == 1) { cout << "Minus" << g.nom << endl; } else { cout << "Minus" << g.nom << " / " << g.denom << endl; }
     rational h = r * _r;
@@ -137,6 +125,6 @@ int main() {
     if (h.denom == 1) { cout << "Times: " << h.nom << endl; } else { cout << "Times: " << h.nom << " / " << h.denom << endl; }
     rational k = r / _r;
     reduce(k);
-    if (k.denom == 1) { cout << "Divide: " << k.nom << endl; } else { cout << "Divide: " << k.nom << " / " << k.denom << endl; } */
+    if (k.denom == 1) { cout << "Divide: " << k.nom << endl; } else { cout << "Divide: " << k.nom << " / " << k.denom << endl; }
     return 0;
 }
